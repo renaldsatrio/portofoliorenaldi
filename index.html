@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            scroll-margin-top: 80px;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 transition-colors duration-300 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-600">Portfolio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#profile" class="nav-link">Profil</a>
+                <a href="#projects" class="nav-link">Project</a>
+                <a href="#resume" class="nav-link">Pengalaman</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-4 py-2 flex flex-col space-y-2">
+                <a href="#profile" class="nav-link py-2">Profil</a>
+                <a href="#projects" class="nav-link py-2">Project</a>
+                <a href="#resume" class="nav-link py-2">Pengalaman</a>
+                <a href="#contact" class="nav-link py-2">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- Profil Singkat -->
+        <section id="profile" class="section mb-20">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img src="image/profil.png" alt="Profile Photo" class="rounded-full w-64 h-64 object-cover border-4 border-blue-500">
+                </div>
+                <div class="w-full md:w-2/3">
+                    <div class="mb-6">
+                        <h2 class="text-3xl font-bold mb-8">Renaldi Satrio Abimanyu</h2>
+                    </div>
+                    <div class="mb-6">                    
+                        <h3 class="text-2xl font-semibold mb-3">Profil Singkat</h3>
+                    </div>
+                    <p class="text-lg mb-6">
+                        Saya adalah lulusan Sarjana (S1) Sistem Informasi dari ITB STIKOM Bali. Saya memiliki kemauan kuat, bertanggung jawab terhadap setiap pekerjaan, dan cepat beradaptasi dengan lingkungan baru. Dengan kemampuan tersebut, saya yakin dapat memberikan kontribusi positif bagi perusahaan.
+                    </p>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-3">Kemampuan & Kompetensi</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">HTML</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">CSS</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">PHP</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Git</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Framework Laravel</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Tujuan Karir:</h3>
+                        <p>
+                            Saya memiliki semangat untuk terus mengembangkan keterampilan di bidang teknologi, khususnya dalam pengembangan web. Tujuan saya dalam lima tahun ke depan adalah menjadi seorang Full Stack Developer yang menguasai baik sisi front-end maupun back-end, serta mampu membangun aplikasi web secara menyeluruh dan efisien.                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Utama -->
+        <section id="projects" class="section mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Project</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card rounded-lg overflow-hidden shadow-lg project-card bg-white">
+                    <img src="image/Screenshot_6.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sistem Pengarsipan Dokumen</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">Laravel</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">PHP</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">GIT</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">MariaDB</span>
+                        </div>
+                        <p class="mb-4">Sistem ini dibuat untuk membantu proses pengarsipan dokumen pada prodi sistem informasi ITB STIKOM Bali</p>
+                    </div>
+                </div>
+                <div class="card rounded-lg overflow-hidden shadow-lg project-card bg-white">
+                    <img src="image/Screenshot_2.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Desain Pemesanan Makanan</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">HTML</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">CSS</span>
+                        </div>
+                        <p class="mb-4">Project ini dibuat sebagai rancangan antarmuka pengguna sebuah website pemesanan makanan secara online.</p>
+                    </div>
+                </div>
+                <div class="card rounded-lg overflow-hidden shadow-lg project-card bg-white">
+                    <img src="image/Screenshot_5.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sistem Perpustakaan</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">HTML</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">CSS</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">PHP</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-sm">MariaDB</span>
+
+                        </div>
+                        <p class="mb-4">Sistem ini dibuat untuk membantu proses peminjaman dan pengembalian buku pada Perpustakaan menggunakan PHP native</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+        <div id="projectModal" class="modal fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2 p-6">
+                <h2 class="text-2xl font-bold mb-4">Detail Proyek</h2>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold">1. Tampilan Halaman Login</h3>
+                    <p class="text-gray-700 mb-2">Berikut adalah hasil dari tampilan halaman login, yang menampilkan form sederhana dengan kolom untuk nama pengguna dan kata sandi. Terdapat tombol "Masuk" serta tautan untuk "Daftar" dan "Lupa Kata Sandi."</p>
+                    <img src="image/login-page.png" alt="Tampilan Halaman Login" class="w-full h-auto rounded-lg shadow-md"> <!-- Ganti dengan jalur gambar yang sesuai -->
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold">2. Tampilan Halaman Lupa Password</h3>
+                    <p class="text-gray-700 mb-2">Berikut adalah hasil dari tampilan halaman lupa password, yang menampilkan form di mana pengguna dapat memasukkan alamat email terdaftar untuk menerima instruksi reset kata sandi.</p>
+                    <img src="image/forgot-password-page.png" alt="Tampilan Halaman Lupa Password" class="w-full h-auto rounded-lg shadow-md"> <!-- Ganti dengan jalur gambar yang sesuai -->
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold">3. Tampilan Halaman Daftar</h3>
+                    <p class="text-gray-700 mb-2">Berikut adalah hasil dari tampilan halaman daftar, yang menampilkan form pendaftaran dengan kolom untuk nama lengkap, email, kata sandi, nomor telepon, dan alamat, sehingga memudahkan pengguna baru untuk membuat akun.</p>
+                    <img src="image/register-page.png" alt="Tampilan Halaman Daftar" class="w-full h-auto rounded-lg shadow-md"> <!-- Ganti dengan jalur gambar yang sesuai -->
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold">4. Tampilan Halaman Dasbor Admin</h3>
+                    <p class="text-gray-700 mb-2">Berikut adalah hasil dari tampilan halaman dasbor admin, yang menampilkan kartu informasi jumlah pengguna, dokumen, dan kategori, dengan navigasi menu di bagian samping untuk mengakses berbagai fitur administrasi.</p>
+                    <img src="image/admin-dashboard.png" alt="Tampilan Halaman Dasbor Admin" class="w-full h-auto rounded-lg shadow-md"> <!-- Ganti dengan jalur gambar yang sesuai -->
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold">5. Tampilan Halaman Profil Admin</h3>
+                    <p class="text-gray-700 mb-2">Berikut adalah hasil dari tampilan halaman profil admin, yang menampilkan form isian untuk memperbarui informasi pribadi seperti nama, email, nomor telepon, alamat, dan password.</p>
+                    <img src="image/admin-profile.png" alt="Tampilan Halaman Profil Admin" class="w-full h-auto rounded-lg shadow-md"> <!-- Ganti dengan jalur gambar yang sesuai -->
+                </div>
+                <button id="closeModal" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Tutup</button>
+            </div>
+        </div>
+
+        <!-- Resume dan Sertifikat -->
+        <section id="resume" class="section mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Pengalaman & Sertifikat</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Pengalaman</h3>
+                    <p class="mb-6">Berikut adalah ringkasan pengalaman dan pendidikan saya:</p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold">Magang</h4>
+                            <p class="text-gray-600">APPKEY | 03/2023 - 06/2023</p>
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Membantu membuat website penjualan source code menggunakan Laravel, khususnya pada bagian front-end</li>
+                                <li>Memisahkan source kode menjadi beberapa bagian</li>
+                                <li>Melakukan update project Laravel dari versi 6 ke versi 9</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarjana Sistem Informasi</h4>
+                            <p class="text-gray-600">Universitas ITB STIKOM Bali | 2020 - 2024</p>
+                            <p>IPK: 3.7/4.0</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Sertifikat & Pelatihan</h3>
+                    <div class="space-y-4">
+                        <div class="border-b pb-4">
+                            <h4 class="font-semibold">DOT | DOT Exam Only</h4>
+                            <p class="text-gray-600">Sertifikasi BNSP | 2020</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <h4 class="font-semibold">LSPP | LSP Informatika Skema Programmer</h4>
+                            <p class="text-gray-600">Sertifikasi BNSP | 2021</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">CIPMP | Project Management</h4>
+                            <p class="text-gray-600">Sertifikasi BNSP | 2022</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">FCNS | Network Security</h4>
+                            <p class="text-gray-600">Sertifikasi BNSP | 2023</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">CGMTD | CGMT (Desain)</h4>
+                            <p class="text-gray-600">Sertifikasi BNSP | 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="contact" class="section py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-12 text-center">Kontak Saya</h2>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Email -->
+                        <div class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition">
+                            <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-envelope text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Email</h3>
+                            <a href="mailto:email@contoh.com" class="text-blue-600 hover:underline">renaldsatrio@gmail.com</a>
+                        </div>
+                        
+                        <!-- Telepon -->
+                        <div class="bg-green-50 rounded-lg p-6 text-center hover:bg-green-100 transition">
+                            <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-phone text-green-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Telepon/WA</h3>
+                            <a href="tel:+6281234567890" class="text-green-600 hover:underline">+62 85739277550</a>
+                        </div>
+                        
+                        <!-- Lokasi -->
+                        <div class="bg-purple-50 rounded-lg p-6 text-center hover:bg-purple-100 transition">
+                            <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-map-marker-alt text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Lokasi</h3>
+                            <p class="text-purple-600">Denpasar, Bali</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Portofolio</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // JavaScript untuk membuka dan menutup modal
+        const openModalButton = document.getElementById('openModal');
+        const closeModalButton = document.getElementById('closeModal');
+        const modal = document.getElementById('projectModal');
+        openModalButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Mencegah perilaku default tautan
+            modal.classList.remove('hidden');
+        });
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+        // Menutup modal jika pengguna mengklik di luar modal
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
